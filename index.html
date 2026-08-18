@@ -4,6 +4,188 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sekolah unggul</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .sekolah img {
+        height: 70px;
+        width: auto;
+        margin-left: 20px;
+      }
+      .sekolah {
+        font-size: 8px;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        line-height: 1.1;
+      }
+      nav {
+        display: flex;
+        background-color: #011a43;
+        height: 80px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      nav ul {
+        display: none;
+      }
+      nav button {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        margin-right: 20px;
+      }
+      .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+      }
+      .container-utama {
+        background:
+          linear-gradient(to right, #ffffff 60%, rgba(255, 255, 255, 0) 100%),
+          url("./asset/gambar\ utama.png");
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .container-utama h1 {
+        color: #011a43;
+        line-height: 1.1;
+        font-size: 30px;
+        padding-top: 50px;
+        padding-left: 20px;
+      }
+      .container-utama span {
+        font-size: 40px;
+      }
+      .container-utama p {
+        line-height: 1.1;
+        padding-left: 20px;
+      }
+      .container-utama button {
+        width: 140px;
+        height: 30px;
+        margin-left: 20px;
+        border-radius: 10px;
+        border: none;
+        background-color: #fb9421;
+        color: white;
+      }
+      .container-card {
+        display: flex;
+        flex-direction: column;
+        margin-left:20px;
+      }
+      .card {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .card img {
+        height: 90px;
+        width: auto;
+        background-color: #011a43;
+        border-radius: 100px;
+        padding: 20px;
+      }
+      .card-text {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <div class="sekolah">
+          <img
+            src="./asset/Biru dan Kuning Minimalis Logo Kelas Sekolah.png"
+            alt=""
+          />
+          <h1>
+            SEKOLAH <br />
+            UNGGUL
+          </h1>
+        </div>
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Profile</a></li>
+          <li><a href="">Program Akademik</a></li>
+          <li><a href="">Fasilitas</a></li>
+          <li><a href="">Galeri</a></li>
+        </ul>
+        <button>PBDP</button>
+      </nav>
+    </header>
+    <section>
+      <div class="container-utama">
+        <h1>
+          Selamat Datang di <br />
+          <span> Sekolah Unggul </span>
+        </h1>
+        <p>
+          Mewujudkan generasi cerdas, berkarakter, <br />
+          dan siap menghadapi masa depan.
+        </p>
+        <button>Daftar Sekarang →</button>
+      </div>
+      <div class="container-card">
+        <div class="card">
+          <img src="./asset/mortarboard.png" alt="" />
+          <div class="card-text">
+            <h1>Akademik</h1>
+            <p>
+              Kurikulum berkualitas dengan <br />
+              metode pembelajaran inovatif <br />
+              untuk prestasi terbaik.
+            </p>
+            <a href="">Selengkapnya →</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./asset/football.png" alt="" />
+          <div class="card-text">
+            <h1>Olahraga</h1>
+            <p>
+              Mengembangkan potensi siswa <br />
+              melalui berbagai kegiatan <br />
+              olahraga dan kompetisi.
+            </p>
+            <a href="">Selengkapnya →</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./asset/art.png" alt="" />
+          <div class="card-text">
+            <h1>Seni</h1>
+            <p>
+              Mendukung kreativitas dan bakat <br />
+              siswa di bidang seni dan budaya <br />
+              secara profesional.
+            </p>
+            <a href="">Selengkapnya →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
