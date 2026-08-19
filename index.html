@@ -3,38 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sekolah unggul</title>
+    <title>Sekolah Unggul</title>
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
       }
-      .sekolah img {
-        height: 70px;
-        width: auto;
-        margin-left: 20px;
-      }
-      .sekolah {
-        font-size: 8px;
-        color: white;
-        display: flex;
-        align-items: center;
-        gap: 2px;
-        line-height: 1.1;
-      }
+
       nav {
         display: flex;
         background-color: #011a43;
         height: 80px;
         align-items: center;
         justify-content: space-between;
+        padding: 0 20px;
+      }
+      .sekolah {
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .sekolah img {
+        height: 50px;
+        width: auto;
+      }
+      .sekolah h1 {
+        font-size: 14px;
+        line-height: 1.2;
       }
       nav ul {
         display: none;
+        list-style: none;
+        gap: 20px;
       }
-      nav button {
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.3s;
+      }
+
+      .btn-ppdb {
         display: none;
+        background-color: #fb9421;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
       }
       .hamburger {
         display: flex;
@@ -43,7 +63,6 @@
         cursor: pointer;
         background: none;
         border: none;
-        margin-right: 20px;
       }
       .hamburger span {
         display: block;
@@ -51,60 +70,222 @@
         height: 3px;
         background-color: white;
       }
+
       .container-utama {
         background:
-          linear-gradient(to right, #ffffff 60%, rgba(255, 255, 255, 0) 100%),
-          url("./asset/gambar\ utama.png");
+          linear-gradient(to right, #ffffff 60%, rgba(255, 255, 255, 0.2) 100%),
+          url("./asset/gambar utama.png");
         background-size: cover;
         background-position: center;
-        height: 300px;
+        height: 400px;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        justify-content: center;
+        gap: 15px;
+        padding: 0 20px;
       }
       .container-utama h1 {
         color: #011a43;
-        line-height: 1.1;
-        font-size: 30px;
-        padding-top: 50px;
-        padding-left: 20px;
+        font-size: 28px;
+        line-height: 1.2;
       }
       .container-utama span {
-        font-size: 40px;
+        font-size: 36px;
+        font-weight: bold;
+        color: #011a43;
       }
       .container-utama p {
-        line-height: 1.1;
-        padding-left: 20px;
+        color: #4f4e50;
+        max-width: 400px;
+        line-height: 1.4;
       }
       .container-utama button {
-        width: 140px;
-        height: 30px;
-        margin-left: 20px;
-        border-radius: 10px;
+        width: 160px;
+        height: 40px;
+        border-radius: 8px;
         border: none;
         background-color: #fb9421;
         color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s;
       }
+      .container-utama button:hover {
+        background-color: #e0831b;
+      }
+
       .container-card {
         display: flex;
         flex-direction: column;
-        margin-left:20px;
+        gap: 20px;
+        padding: 40px 20px;
       }
       .card {
         display: flex;
-        gap: 10px;
+        gap: 20px;
         align-items: center;
-      }
-      .card img {
-        height: 90px;
-        width: auto;
-        background-color: #011a43;
-        border-radius: 100px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
         padding: 20px;
+        background-color: white;
+      }
+      .card-img {
+        height: 70px;
+        width: 70px;
+        background-color: #011a43;
+        border-radius: 50%;
+        padding: 15px;
+        flex-shrink: 0;
+      }
+      .bola {
+        height: 70px;
+        width: 70px;
+        background-color: #fd9419;
+        border-radius: 50%;
+        padding: 15px;
+        flex-shrink: 0;
       }
       .card-text {
         display: flex;
         flex-direction: column;
+        gap: 5px;
+      }
+      .card h1 {
+        font-size: 18px;
+        color: #011a43;
+      }
+      .card p {
+        font-size: 13px;
+        line-height: 1.4;
+        color: #666;
+      }
+      .card a {
+        text-decoration: none;
+        color: #fc961e;
+        font-size: 13px;
+        font-weight: bold;
+        margin-top: 5px;
+      }
+
+      footer {
+        background-color: #001943;
+        color: white;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      .footer {
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+      }
+      .footer img {
+        height: 30px;
+        width: auto;
+        flex-shrink: 0;
+      }
+      .text-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .text-footer h1 {
+        font-size: 16px;
+      }
+      .text-footer p {
+        font-size: 13px;
+        color: #ccc;
+        line-height: 1.4;
+      }
+      .container-img-footer {
+        display: flex;
+        gap: 12px;
+        margin-top: 10px;
+      }
+      .container-img-footer img {
+        height: 24px;
+        width: auto;
+      }
+
+      @media (min-width: 768px) {
+        nav {
+          padding: 0 300px;
+        }
+        nav ul {
+          display: flex;
+          gap: 20px;
+        }
+        .sekolah img {
+          height: 70px;
+          width: auto;
+        }
+        .btn-ppdb {
+          display: block;
+          border-radius: 10px;
+        }
+        .hamburger {
+          display: none;
+        }
+        .container-utama {
+          padding: 0 300px;
+          height: 500px;
+          background:
+            linear-gradient(
+              to right,
+              #ffffff 50%,
+              rgba(255, 255, 255, 0.2) 100%
+            ),
+            url("./asset/gambar utama.png");
+          background-size: cover;
+          background-position: center;
+        }
+        .container-utama h1 {
+          font-size: 40px;
+        }
+        .container-utama span {
+          font-size: 52px;
+        }
+        .container-card {
+          flex-direction: row;
+          justify-content: center;
+          padding: 50px;
+        }
+        .card {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 400px;
+          height: 400px;
+          gap: 50px;
+        }
+        .card-text {
+          text-align: center;
+          align-items: center;
+        }
+        .card img {
+          height: 90px;
+          width: auto;
+        }
+        .card h1 {
+          font-size: 24px;
+        }
+        .card p {
+          font-size: 16px;
+        }
+        .card a {
+          font-size: 16px;
+        }
+      }
+      footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 50px;
+        align-items: center;
+        padding-left: 300px;
+      }
+      .footer {
+        flex: 1;
       }
     </style>
   </head>
@@ -114,12 +295,9 @@
         <div class="sekolah">
           <img
             src="./asset/Biru dan Kuning Minimalis Logo Kelas Sekolah.png"
-            alt=""
+            alt="Logo Sekolah"
           />
-          <h1>
-            SEKOLAH <br />
-            UNGGUL
-          </h1>
+          <h1>SEKOLAH<br />UNGGUL</h1>
         </div>
         <button class="hamburger">
           <span></span>
@@ -127,65 +305,93 @@
           <span></span>
         </button>
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Profile</a></li>
-          <li><a href="">Program Akademik</a></li>
-          <li><a href="">Fasilitas</a></li>
-          <li><a href="">Galeri</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Program Akademik</a></li>
+          <li><a href="#">Fasilitas</a></li>
+          <li><a href="#">Galeri</a></li>
         </ul>
-        <button>PBDP</button>
+        <button class="btn-ppdb">PPDB</button>
       </nav>
     </header>
-    <section>
-      <div class="container-utama">
-        <h1>
-          Selamat Datang di <br />
-          <span> Sekolah Unggul </span>
-        </h1>
+
+    <main>
+      <section class="container-utama">
+        <h1>Selamat Datang di<br /><span>Sekolah Unggul</span></h1>
         <p>
-          Mewujudkan generasi cerdas, berkarakter, <br />
-          dan siap menghadapi masa depan.
+          Mewujudkan generasi cerdas, berkarakter, dan siap menghadapi masa
+          depan.
         </p>
         <button>Daftar Sekarang →</button>
-      </div>
-      <div class="container-card">
+      </section>
+
+      <section class="container-card">
         <div class="card">
-          <img src="./asset/mortarboard.png" alt="" />
+          <img class="card-img" src="./asset/mortarboard.png" alt="Akademik" />
           <div class="card-text">
             <h1>Akademik</h1>
             <p>
-              Kurikulum berkualitas dengan <br />
-              metode pembelajaran inovatif <br />
-              untuk prestasi terbaik.
+              Kurikulum berkualitas dengan metode pembelajaran inovatif untuk
+              prestasi terbaik.
             </p>
-            <a href="">Selengkapnya →</a>
+            <a href="#">Selengkapnya →</a>
           </div>
         </div>
         <div class="card">
-          <img src="./asset/football.png" alt="" />
+          <img class="bola" src="./asset/soccer-ball.png" alt="Olahraga" />
           <div class="card-text">
             <h1>Olahraga</h1>
             <p>
-              Mengembangkan potensi siswa <br />
-              melalui berbagai kegiatan <br />
-              olahraga dan kompetisi.
+              Mengembangkan potensi siswa melalui berbagai kegiatan olahraga dan
+              kompetisi.
             </p>
-            <a href="">Selengkapnya →</a>
+            <a href="#">Selengkapnya →</a>
           </div>
         </div>
         <div class="card">
-          <img src="./asset/art.png" alt="" />
+          <img class="card-img" src="./asset/art.png" alt="Seni" />
           <div class="card-text">
             <h1>Seni</h1>
             <p>
-              Mendukung kreativitas dan bakat <br />
-              siswa di bidang seni dan budaya <br />
+              Mendukung kreativitas dan bakat siswa di bidang seni dan budaya
               secara profesional.
             </p>
-            <a href="">Selengkapnya →</a>
+            <a href="#">Selengkapnya →</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <img src="./asset/maps-and-flags.png" alt="Alamat" />
+        <div class="text-footer">
+          <h1>Alamat Sekolah</h1>
+          <p>
+            Jl. Pendidikan No. 123 Kota Cerdas,<br />Kec. Maju Prov. Indonesia
+            12345
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <img src="./asset/phone-receiver-silhouette.png" alt="Kontak" />
+        <div class="text-footer">
+          <h1>Hubungi Kami</h1>
+          <p>(021) 1234 5678<br />info@sekolahunggul.sch.id</p>
+        </div>
+      </div>
+      <div class="footer">
+        <img src="./asset/marketing.png" alt="Sosmed" />
+        <div class="text-footer">
+          <h1>Tautan Media Sosial</h1>
+          <div class="container-img-footer">
+            <img src="./asset/facebook (1).png" alt="Facebook" />
+            <img src="./asset/instagram (2).png" alt="Instagram" />
+            <img src="./asset/youtube.png" alt="Youtube" />
+            <img src="./asset/tik-tok.png" alt="TikTok" />
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   </body>
 </html>
