@@ -86,18 +86,18 @@
       }
       .container-utama h1 {
         color: #011a43;
-        font-size: 28px;
+        font-size: 20px;
         line-height: 1.2;
       }
       .container-utama span {
-        font-size: 36px;
+        font-size: 30px;
         font-weight: bold;
         color: #011a43;
       }
       .container-utama p {
         color: #4f4e50;
-        max-width: 400px;
         line-height: 1.4;
+        font-size: 12px;
       }
       .container-utama button {
         width: 160px;
@@ -208,7 +208,7 @@
         width: auto;
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: 1008px) {
         nav {
           padding: 0 300px;
         }
@@ -276,16 +276,16 @@
         .card a {
           font-size: 16px;
         }
-      }
-      footer {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 50px;
-        align-items: center;
-        padding-left: 300px;
-      }
-      .footer {
-        flex: 1;
+
+        footer {
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 50px 300px;
+          align-items: flex-start;
+        }
+        .footer {
+          flex: 1;
+        }
       }
     </style>
   </head>
@@ -319,8 +319,8 @@
       <section class="container-utama">
         <h1>Selamat Datang di<br /><span>Sekolah Unggul</span></h1>
         <p>
-          Mewujudkan generasi cerdas, berkarakter, dan siap menghadapi masa
-          depan.
+          Mewujudkan generasi cerdas, <br />berkarakter, dan siap menghadapi
+          masa depan.
         </p>
         <button>Daftar Sekarang →</button>
       </section>
